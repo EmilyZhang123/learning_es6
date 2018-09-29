@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //forEach(),map(),filter(),some(),every(),接受参数一致,两个参数
+    //用map()需要有返回值,重新整理数据结构
+    //filter()过滤掉不合格的元素
+    //some()查找，一个条件符合返回true;every()所有天剑符合返回true
+    //find() 查找第一个符合条件的数组成员，否则返回undefined
+    //findIndex() 查找位置，否则返回-1
+    //fill(val,startPosition,endPosition)
+    /* let arr=[1,2,3,4,5]
+       arr.forEach(function(val,index,arr){
+           console.log(this)
+       },777)*/
+   // let x=[{a:1},{a:9},{a:6},{a:5}];
+   /*let newArr = x.map((item,i,arr)=>{
+       let json={};
+       json.t=item['a']+1;
+       json.b=item['a']+3;
+       return json
+   })
+    console.log(newArr)*/
+   /*let newArr = x.filter((item,i)=>{
+       return item.a>5
+   })
+    console.log(newArr)*/
+
+/*   let y=['xx','zz','ll','dd'];
+   let findInArr=(arr,val)=> {
+       return arr.some((item,i,arr)=>{
+           return val = item
+       })
+   }
+   console.log(findInArr(y,'zz'))*/
+
+    // reduce(),求和；reduceRight()
+/*    let nums=[1,2,3,4,5];
+    let sum=  nums.reduce((pre,cur,index,arr)=>{
+        // return pre+cur
+        return pre**cur
+    })
+    // console.log(sum)
+
+    for(let i of nums){
+        //循环值
+        // console.log(i)
+    }
+    for(let i of nums.keys()){
+        //循环索引
+        // console.log(i)
+    }
+    for(let [i,item] of nums.entries()){
+        //循环索引
+        // console.log(i,item)
+    }
+    for(let i in nums){
+        //循环值
+        // console.log(i)
+    }*/
+
+//数组复制
+/*
+    let arr1=[1,2,3]
+    let arr2=[...arr1]
+    let arr3 = Array.from(arr1)
+    let json={
+        0:'a',
+        1:'b',
+        2:'c',
+        3:'d',
+        length:2
+    };
+    console.log(Array.from(json))
+
+    console.log(Array.of('x','y','z'))
+*/
+
+
+</script>
+</body>
+</html>
