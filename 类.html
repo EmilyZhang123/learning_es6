@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = 'outer'
+    class Person {
+        constructor(name,age){
+            //构造函数，调用new，自动执行
+            console.log("gouzaohanshu")
+            this.name=name;
+            this.age=age;
+        }
+        //方法之间不需要逗号分隔，加了会报错
+        //前面不需要加上function这个关键
+        showName(){
+            return `名字为${this.name}`
+        }
+        showAge(){
+            return `名字为${this.age}`
+        }
+        //类的属性名，可以采用表达式。
+        [x](){
+            return `outer我执行了`
+        }
+
+    }
+    let p1 = new Person('zhangbinjin',18)
+    console.log(p1.showName())
+    console.log(p1.showAge())
+    console.log(p1.outer())
+    Person.hasOwnProperty('name') // true
+    Person.hasOwnProperty('age') // true
+    Person.hasOwnProperty('showAge') // false
+    Person.__proto__.hasOwnProperty('showAge') // true
+
+</script>
+</body>
+</html>
